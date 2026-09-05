@@ -1,0 +1,152 @@
+{
+  "account_info": {
+    "valid_account": {
+      "login": 12345,
+      "trade_mode": 1,
+      "leverage": 100,
+      "limit_orders": 100,
+      "margin_so_mode": 0,
+      "trade_allowed": true,
+      "trade_expert": true,
+      "margin_mode": 0,
+      "currency_digits": 2,
+      "balance": 10000.0,
+      "credit": 0.0,
+      "profit": 0.0,
+      "equity": 10000.0,
+      "margin": 500.0,
+      "margin_free": 9500.0,
+      "margin_level": 2000.0,
+      "margin_so_call": 50.0,
+      "margin_so_so": 25.0,
+      "name": "Test Account",
+      "server": "TestServer-Demo",
+      "currency": "USD",
+      "company": "Test Broker"
+    },
+    "low_balance_account": {
+      "login": 12345,
+      "trade_mode": 1,
+      "leverage": 100,
+      "balance": 50.0,
+      "equity": 50.0,
+      "margin": 0.0,
+      "currency": "USD",
+      "server": "TestServer-Demo",
+      "company": "Test Broker"
+    },
+    "netting_account": {
+      "login": 67890,
+      "trade_mode": 0,
+      "leverage": 50,
+      "balance": 5000.0,
+      "equity": 5000.0,
+      "currency": "EUR",
+      "server": "TestServer-Live",
+      "company": "Test Broker"
+    }
+  },
+  "terminal_info": {
+    "valid_terminal": {
+      "name": "MetaTrader 5",
+      "build": 3980,
+      "version": "5.00 build 3980",
+      "connected": true,
+      "trade_allowed": true,
+      "tradeapi_disabled": false,
+      "maxbars": 100000,
+      "mqid": true,
+      "dlls_allowed": true,
+      "mail_enabled": true,
+      "ftp_enabled": false,
+      "notifications_enabled": true
+    },
+    "trading_disabled_terminal": {
+      "name": "MetaTrader 5",
+      "build": 3980,
+      "version": "5.00 build 3980",
+      "connected": true,
+      "trade_allowed": false,
+      "tradeapi_disabled": true,
+      "maxbars": 100000,
+      "mqid": true,
+      "dlls_allowed": false,
+      "mail_enabled": false,
+      "ftp_enabled": false,
+      "notifications_enabled": false
+    }
+  },
+  "symbol_specs": {
+    "XAUUSD": {
+      "name": "XAUUSD",
+      "description": "Gold vs US Dollar",
+      "currency_base": "XAU",
+      "currency_profit": "USD",
+      "currency_margin": "USD",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "trade_tick_value": 1.0,
+      "volume_min": 0.01,
+      "volume_max": 100.0,
+      "volume_step": 0.01,
+      "spread": 3,
+      "trade_mode": 4,
+      "visible": true,
+      "trade_stops_level": 10,
+      "trade_freeze_level": 5,
+      "margin_initial": 0.01,
+      "margin_maintenance": 0.01,
+      "session_deals": 0,
+      "session_buy_orders": 0,
+      "session_sell_orders": 0,
+      "time": 1692177600
+    },
+    "GOLD": {
+      "name": "GOLD",
+      "description": "Gold Spot",
+      "currency_base": "XAU",
+      "currency_profit": "USD",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "trade_tick_value": 1.0,
+      "volume_min": 0.01,
+      "volume_max": 50.0,
+      "spread": 5
+    }
+  },
+  "tick_info": {
+    "XAUUSD_tick": {
+      "time": 1692177600,
+      "bid": 2535.50,
+      "ask": 2535.70,
+      "last": 2535.60,
+      "volume": 100,
+      "time_msc": 1692177600000,
+      "flags": 6,
+      "volume_real": 100.0
+    }
+  },
+  "errors": {
+    "invalid_credentials": [64, "Invalid account"],
+    "terminal_not_running": [4, "MT5 terminal not found"],
+    "network_error": [5, "Network connection failed"],
+    "trading_disabled": [133, "Trading is disabled"],
+    "symbol_not_found": [4301, "Symbol not found"],
+    "initialization_failed": [1, "Initialization failed"],
+    "login_timeout": [10004, "Timeout on login"],
+    "connection_lost": [10012, "Connection to trade server lost"]
+  },
+  "market_hours": {
+    "XAUUSD": [
+      {
+        "symbol": "XAUUSD",
+        "session_name": "Main Session",
+        "start_time": "00:01",
+        "end_time": "23:59",
+        "is_active": true
+      }
+    ]
+  }
+}

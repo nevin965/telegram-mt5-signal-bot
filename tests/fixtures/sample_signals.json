@@ -1,0 +1,144 @@
+{
+  "valid_signals": [
+    {
+      "text": "JE BUY GOLD 3362",
+      "expected": {
+        "action": "BUY",
+        "symbol": "GOLD", 
+        "entry_price": "3362",
+        "stop_loss": null,
+        "take_profit": null
+      }
+    },
+    {
+      "text": "BUY GOLD @ 3362.50",
+      "expected": {
+        "action": "BUY",
+        "symbol": "GOLD",
+        "entry_price": "3362.50",
+        "stop_loss": null,
+        "take_profit": null
+      }
+    },
+    {
+      "text": "ACHETER OR 3365 SL 3350 TP 3380",
+      "expected": {
+        "action": "BUY",
+        "symbol": "GOLD",
+        "entry_price": "3365",
+        "stop_loss": "3350",
+        "take_profit": "3380"
+      }
+    },
+    {
+      "text": "JE VEND XAUUSD 3370",
+      "expected": {
+        "action": "SELL",
+        "symbol": "XAUUSD",
+        "entry_price": "3370",
+        "stop_loss": null,
+        "take_profit": null
+      }
+    },
+    {
+      "text": "SELL GOLD @ 3375.25 STOP 3385 TARGET 3360",
+      "expected": {
+        "action": "SELL", 
+        "symbol": "GOLD",
+        "entry_price": "3375.25",
+        "stop_loss": "3385",
+        "take_profit": "3360"
+      }
+    },
+    {
+      "text": "SHORT OR @ 3380",
+      "expected": {
+        "action": "SELL",
+        "symbol": "GOLD",
+        "entry_price": "3380",
+        "stop_loss": null,
+        "take_profit": null
+      }
+    },
+    {
+      "text": "VENDRE GOLD 3355 SL: 3370 TP: 3340",
+      "expected": {
+        "action": "SELL",
+        "symbol": "GOLD", 
+        "entry_price": "3355",
+        "stop_loss": "3370",
+        "take_profit": "3340"
+      }
+    },
+    {
+      "text": "J'ACHÈTE XAU 3350.75",
+      "expected": {
+        "action": "BUY",
+        "symbol": "XAUUSD",
+        "entry_price": "3350.75",
+        "stop_loss": null,
+        "take_profit": null
+      }
+    }
+  ],
+  "invalid_signals": [
+    {
+      "text": "Hello how are you?",
+      "reason": "no_trading_keywords"
+    },
+    {
+      "text": "BUY EURUSD 1.1000",
+      "reason": "unsupported_symbol"
+    },
+    {
+      "text": "BUY GOLD",
+      "reason": "missing_price"
+    },
+    {
+      "text": "SELL GOLD 2500",
+      "reason": "price_out_of_range"
+    },
+    {
+      "text": "BUY GOLD 5000",
+      "reason": "price_out_of_range"
+    },
+    {
+      "text": "BUY GOLD 3365 SL 3370",
+      "reason": "invalid_sl_logic"
+    },
+    {
+      "text": "SELL GOLD 3365 SL 3350",
+      "reason": "invalid_sl_logic"
+    }
+  ],
+  "edge_cases": [
+    {
+      "text": "buy gold3362",
+      "description": "no_spaces"
+    },
+    {
+      "text": "BUY GOLD    3362.00000",
+      "description": "extra_spaces_and_decimals"
+    },
+    {
+      "text": "Buy Gold @ 3362,50",
+      "description": "comma_decimal_separator"
+    },
+    {
+      "text": "BUY GOLD 3362 SL3350 TP3375",
+      "description": "no_spaces_sl_tp"
+    },
+    {
+      "text": "",
+      "description": "empty_string"
+    },
+    {
+      "text": "   ",
+      "description": "whitespace_only"
+    },
+    {
+      "text": "BUY GOLD abc",
+      "description": "invalid_price_format"
+    }
+  ]
+}
