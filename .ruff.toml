@@ -1,0 +1,46 @@
+[lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+    "ARG001", # unused-function-argument
+    "ARG002", # unused-method-argument
+    "ARG003", # unused-class-method-argument
+    "ARG004", # unused-static-method-argument
+    "ARG005", # unused-lambda-argument
+    "N",  # pep8-naming
+    "SIM", # flake8-simplify
+    "TCH", # flake8-type-checking
+    "FLY", # flynt
+    "PERF", # perflint
+    "FURB", # refurb
+    "RUF", # ruff-specific rules
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W505",  # doc line too long
+    "B904",  # use raise from to specify exception cause
+]
+fixable = ["ALL"]
+unfixable = []
+
+[lint.per-file-ignores]
+"tests/**/*" = ["S101"]  # Allow assert in tests
+
+[lint.isort]
+known-first-party = ["src"]
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
